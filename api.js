@@ -1,5 +1,5 @@
 const express = require('express');
-const { getData } = require('./data');
+const JsonData = require('./data');
 const app = express();
 const port = 3000;
 
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 // 設定 /getData 路由
 app.get('/getData', (req, res) => {
-  getData((err, jsonData) => {
+    JsonData.getData((err, jsonData) => {
     if (err) {
       console.error('讀取 JSON 檔案出錯:', err);
       res.status(500).send('讀取 JSON 檔案出錯');
