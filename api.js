@@ -1,7 +1,7 @@
 const express = require('express');
 const JsonData = require('./data');
 const app = express();
-const port = 3000;
+const port = 8080;
 
 // 測試 hello george
 app.get('/', (req, res) => {
